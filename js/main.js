@@ -211,12 +211,13 @@ function ocultaGestioHospital(objecteRebut){
 
 function crearHospital(){
 	
-			eleID_divPresentacio.classList.toggle("d-none");
+	    eleID_divPresentacio.classList.toggle("d-none");
             eleID_divHospital.classList.toggle("d-none");
             mostraBotons();
-			eleID_divPresentacio.classList.toggle("d-none");
-			eleID_divPacient.classList.toggle("d-none");
-			amagaBotons();
+	    
+	    eleID_divPresentacio.classList.toggle("d-none");
+	    eleID_divPacient.classList.toggle("d-none");
+	    amagaBotons();
 
 }
 
