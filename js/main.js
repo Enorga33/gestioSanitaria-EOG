@@ -209,6 +209,17 @@ function ocultaGestioHospital(objecteRebut){
             mostraBotons();
    }
 
+function crearHospital(){
+	
+			eleID_divPresentacio.classList.toggle("d-none");
+            eleID_divHospital.classList.toggle("d-none");
+            mostraBotons();
+			eleID_divPresentacio.classList.toggle("d-none");
+			eleID_divPacient.classList.toggle("d-none");
+			amagaBotons();
+
+}
+
 function mostraGestioPacients(objecteRebut){
       if (!conteClass(eleID_divPacient,"d-none")) {
             afegirClass(eleID_divPacient,"d-none");
