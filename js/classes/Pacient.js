@@ -1,9 +1,9 @@
 'use strict'
 
 class Pacient {
-  constructor(nom, malaltia) {
-    nom = nom;
-    malaltia = malaltia;
+  constructor(nomRebut, malaltiaRebuda) {
+    this.nom = nomRebut;
+    this.malaltia = malaltiaRebuda;
   }
 }
 
