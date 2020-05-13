@@ -6,6 +6,7 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon"> 
     <title id="titApp">Aplicació gestió Sanitària</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="estils.css">
 
 <!-- PER MODAL 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -78,6 +79,8 @@
             <button type="button" id="btnGestMetges" class="btn btn-primary btn-block"  onClick="mostraGestioMetges()">Metges</button>
             <br>
             <button type="button" id="btnGestAplicacio" class="btn btn-primary btn-block"  onClick="mostraGestioApp()">Control</button>
+			<br>
+			<button type="button" id="btnGestCriteris" class="btn btn-primary btn-block"  onClick="criteris()">Criteri dels Estils</button>
             <!-- <button type="button" class="btn btn-primary  btn-block" data-toggle="modal" data-target="#espaiModal">Open modal</button> -->
         </div>
         <!-- FINAL COLUMNA 1 >md 02 < -- > bloc control equerre -->
@@ -92,6 +95,40 @@
               <p>Amb els botons del panell lateral, podràs accedir a tots els menus!</p>
           </div>
           <!-- FINAL eleID_divPresentacio -->
+		  
+		  <!-- INICI eleID_divCriteris -->
+		  <div class="w-100 mx-auto align-items-center border mt-8 mb-8 p-4 rounded shadow bg-white  d-none" id="divCriteris">
+            <!-- mt margin top = 8    mt margin bottom = 8 -->
+            <h3  class="text-center mt-3 mb-3" >Els meus criteris sobre els estils</h3>
+            <div class="form-row" id="formControls">
+              <div class="text-center">
+               
+			   <br>
+			   <b><p>He aplicat canvis visuals, per a facilitar la visualització del continguts més rellebants com:</p></b>
+              
+			  </div>
+			  <br>
+			  <div class="text-justify">
+            		<br>- <b>"Input"</b>, per a la introducció de text
+					<br>
+					<br>- <b>"Title"</b>, informa de les accions als botons
+					<br>- ...
+			   
+              
+			  <br>
+			 
+ 
+                <button type="button" class="btn btn-primary mt-4" onClick="ocultaCriteris(this)">Torna</button>
+ 
+			  </div>
+            
+			</div>
+            <div class="form-row" id="formControls">
+              <div class="text-center">
+                <h2 class="text-center" id="h2ResutltatFormControls"></h2>
+              </div>
+            </div>
+          </div>
           <!-- ------------------------------------------------------------------------------------ -->
           <!-- INICI eleID_divHospital -->
           <div class="w-100 mx-auto align-items-center border mt-8 mb-8 p-4 rounded shadow bg-white d-none" id="divHospital">
@@ -124,7 +161,7 @@
             <!-- INICI botonsIntroHospital -->
             <div class="text-center" id="botonsIntroHospital">
               <hr style="border: 1px solid green; border-radius: 10px;">
-              <button type="button" class="btn btn-primary mt-4" onClick="crearHospital()">Crear</button>
+              <button type="button" class="btn btn-primary mt-4" title="Creació de l'hospital" onClick="crearHospital()">Crear</button>
               <!-- <button type="button" class="btn btn-primary mt-4" onClick="ocultaGestioHospital(this)">Torna</button> -->
             </div>
             <!-- FINAL botonsIntroHospital -->
@@ -138,8 +175,8 @@
             <p class="text-center">Introdueix les dades del pacients que vols ingressar:</p>
             <div id="dadesPacient"></div>
             <div class="text-center">
-              <button type="button" class="btn btn-primary mt-4" onClick="ingressarPacients()">Ingressar</button>
-              <button type="button" class="btn btn-primary mt-4" onClick="ocultaGestioPacients(this)">Torna</button>
+              <button type="button" class="btn btn-primary mt-4" title="Ingresar pacient" onClick="ingressarPacients()">Ingressar</button>
+              <button type="button" class="btn btn-primary mt-4" title="Tornar a l'inici" onClick="ocultaGestioPacients(this)">Torna</button>
             </div>
           </div>
           <!-- FINAL divPacients -->
