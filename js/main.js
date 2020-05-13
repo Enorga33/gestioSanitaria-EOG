@@ -18,6 +18,7 @@ const eleID_divPacient = document.getElementById("divPacient");
 
 const eleID_divControls = document.getElementById("divControls");
 
+const eleID_divCriteris = document.getElementById("divCriteris");
 
 const eleID_TitolHospital = document.getElementById("h2TitolHospital");
 
@@ -27,6 +28,7 @@ const eleID_btnGestMalalties = document.getElementById("btnGestMalalties");
 const eleID_btnGestMetges = document.getElementById("btnGestMetges");
 
 const eleID_btnGestAplicacio = document.getElementById("btnGestAplicacio");
+const eleID_btnGestCriteris = document.getElementById("btnGestCriteris");
 
 const eleID_h2ResutltatFormControls = document.getElementById("h2ResutltatFormControls");
 
@@ -106,8 +108,12 @@ function mostraBotons() {
       eleID_btnGestMalalties.disabled = false;
       eleID_btnGestMetges.disabled = false;
       eleID_btnGestAplicacio.disabled = false;
-
-      $(eleID_btnGestHospitals).removeClass('btn-dark');
+	  eleID_btnGestCriteris.disabled = false;
+      
+	  $(eleID_btnGestCriteris).removeClass('btn-dark');
+      $(eleID_btnGestCriteris).addClass('btn-primary');
+	  
+	  $(eleID_btnGestHospitals).removeClass('btn-dark');
       $(eleID_btnGestHospitals).addClass('btn-primary');
 
       $(eleID_btnGestPacients).removeClass('btn-dark');
@@ -129,7 +135,12 @@ function amagaBotons() {
       eleID_btnGestMalalties.disabled = true;
       eleID_btnGestMetges.disabled = true;
       eleID_btnGestAplicacio.disabled = true;
+	  eleID_btnGestCriteris.disabled = true;
 
+	
+	  $(eleID_btnGestCriteris).removeClass('btn-primary');
+      $(eleID_btnGestCriteris).addClass('btn-dark');
+	  
       $(eleID_btnGestHospitals).removeClass('btn-primary');
       $(eleID_btnGestHospitals).addClass('btn-dark');
 
@@ -193,7 +204,7 @@ function eliminaClass(elementRebut, nomClass) {
       eleID_divControls.classList.toggle("d-none");
       amagaBotons();
    }
-
+   
 
     function mostraGestioMetges(objecte){
           mostraMissatge(0);
@@ -390,4 +401,18 @@ function ocultaGestioPacients(objecteRebut){
       mostraBotons();
    }
    
+   function criteris(objecte){
+      eleID_divPresentacio.classList.toggle("d-none");
+      eleID_divCriteris.classList.toggle("d-none");
+      amagaBotons();
+   }
    
+   function ocultaCriteris(objecteRebut){
+		 
+     eleID_divPresentacio.classList.toggle("d-none");
+     eleID_divCriteris.classList.toggle("d-none");
+	 amagaBotons();
+	
+  
+   }
+  
