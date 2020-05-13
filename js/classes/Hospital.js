@@ -1,16 +1,15 @@
 'use strict'
 
+
+// , maximMetges
 class Hospital {
-  constructor(nom, maximPacients, maximMetges) {
-    nomHospital = nom;
-    maximPacients = maximPacients;
-    pacientsIngressats = [];
-    ingressarPacient = ingressarPacient;
-    donarDaltaPacient = donarDaltaPacient;
-    morirPacient = morirPacient;
-  }
+	constructor(nomRebut, maximPacientsRebut) {
+    this.nomHospital = nomRebut;
+    this.maximPacients = maximPacientsRebut;
+    this.pacientsIngressats = [];
+}
   
-    ingressarPacient(pacient) {
+	ingressarPacient(pacient) {
       if (pacient != null && (this.pacientsIngressats.length < this.maximPacients))
         this.pacientsIngressats.push(pacient);
     }
