@@ -411,7 +411,7 @@ function ocultaGestioPacients(objecteRebut){
 		 
      eleID_divPresentacio.classList.toggle("d-none");
      eleID_divCriteris.classList.toggle("d-none");
-	 amagaBotons();
+	 mostraBotons();
 	
   
    }
