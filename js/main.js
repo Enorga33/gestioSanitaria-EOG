@@ -18,7 +18,9 @@ const eleID_divPacient = document.getElementById("divPacient");
 
 const eleID_divControls = document.getElementById("divControls");
 
+
 const eleID_divCriteris = document.getElementById("divCriteris");
+
 
 const eleID_TitolHospital = document.getElementById("h2TitolHospital");
 
@@ -401,6 +403,7 @@ function ocultaGestioPacients(objecteRebut){
       mostraBotons();
    }
    
+
    function criteris(objecte){
       eleID_divPresentacio.classList.toggle("d-none");
       eleID_divCriteris.classList.toggle("d-none");
@@ -415,4 +418,4 @@ function ocultaGestioPacients(objecteRebut){
 	
   
    }
-  
+
